@@ -1,10 +1,10 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
+#Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class CapsuleCli < Formula
   desc "CLI to interact with Capsule"
   homepage "https://www.capsuleapp.cyou"
-  url "https://github.com/capsuleappcyou/capsule-cli/releases/download/v0.0.1-alpha/capsule-macos.zip"
+  url "https://github.com/capsuleappcyou/capsule-cli/releases/download/v0.0.1-alpha/capsule-cli-macos-latest-v0.0.1-alpha.tar.gz"
   sha256 "d1e338c82ec1436e398a5a074c61db464c486a51161aeed93278c0a8dd1ab503"
   license "Apache-2.0"
   version "v0.0.1-alpha"
@@ -12,13 +12,9 @@ class CapsuleCli < Formula
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    bin.install "capsule"
   end
-
+  
   test do
     # `test do` will create, run in and delete a temporary directory.
     #

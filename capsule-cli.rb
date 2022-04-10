@@ -5,7 +5,7 @@ class CapsuleCli < Formula
   desc "CLI to interact with Capsule"
   homepage "https://www.capsuleapp.cyou"
   url "https://github.com/capsuleappcyou/capsule-cli/releases/download/v0.0.1-alpha/capsule-cli-macos-latest-v0.0.1-alpha.tar.gz"
-  sha256 "d1e338c82ec1436e398a5a074c61db464c486a51161aeed93278c0a8dd1ab503"
+  sha256 "b20ca6487b218565b5678fa676c9872af56587fad59aae3c023712db3d9a1f35"
   license "Apache-2.0"
   version "v0.0.1-alpha"
 
